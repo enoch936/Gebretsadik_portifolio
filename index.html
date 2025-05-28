@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gebretsadik Woldesenbet | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Digital Background Elements -->
+  <canvas id="binaryRain" class="binary-rain"></canvas>
+  <canvas id="digitalBg" class="digital-bg"></canvas>
+
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <button class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="active">
+      <div class="home-content">
+        <h1>Hi 👏, I'm <span class="highlight">Gebretsadik Woldesenbet</span></h1>
+        <div class="typing-text">
+          I'm a <span id="typing"></span>
+        </div>
+        <p>A Computer  Science student specializing in creating digital solutions that bridge technology and human needs. My work focuses on innovative approaches to complex problems.</p>
+        <div class="btn-group">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+          <a href="#" class="btn btn-outline" id="downloadCV">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+      <div class="home-image">
+        <div class="home-image-container">
+          <img src="profile.jpg" alt="Gebretsadik Woldesenbet" class="floating">
+          <div class="tech-icons" id="techIcons"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="content-section pulse">
+        <h2>About Me</h2>
+        <p>I'm a dedicated Computer Science Training with a strong passion for technology and problem-solving. My journey in computer science has equipped me with diverse skills across multiple domains, allowing me to create comprehensive digital solutions.</p>
+        
+        <h3>My Philosophy</h3>
+        <p>I believe in the power of technology to transform lives and businesses. My approach combines technical expertise with creative problem-solving to deliver solutions that are not only functional but also intuitive and user-friendly.</p>
+        
+        <h3>What I Bring</h3>
+        <ul>
+          <li><strong>Innovative Thinking:</strong> Creative solutions to complex problems</li>
+          <li><strong>Technical Expertise:</strong> Full-stack development capabilities</li>
+          <li><strong>Analytical Mindset:</strong> Data-driven decision making</li>
+          <li><strong>Collaborative Spirit:</strong> Effective team player and communicator</li>
+          <li><strong>Continuous Learning:</strong> Always expanding my skill set</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="content-section">
+        <h2>I am currunt learning and developing Technical Skills</h2>
+        <p>I've worked with a wide range of technologies in my development journey. Here are some of my core competencies:</p>
+        
+        <div class="skills-container" id="skillsContainer"></div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="content-section">
+        <h2>Education & Certification</h2>
+        
+        <div class="education-item">
+          <h3>University of Gondar</h3>
+          <p class="education-duration">2025 - Present</p>
+          <p class="education-degree">Bachelor of Computer Science in University Of Gondar</p>
+          <p>Training in Software Engineering and Network Systems</p>
+          <ul>
+            <li>Expecting Graduating 2026</li>
+            <li>Training on ethical hacking and cyber security</li>
+            <li>Basics of Data analysis and front end</li>
+          </ul>
+        </div>
+        
+        <h3>Certifications</h3>
+        <div class="certifications-grid" id="certificationsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="content-section">
+        <h2>Featured Projects</h2>
+        <p>Here are some of my notable projects that demonstrate my skills and learning journey:</p>
+        
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="content-section">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind or want to discuss opportunities? Feel free to reach out!</p>
+        
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <a href="enoch3696@gmail.com">enoch3696@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+251">+251 918184887</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3>Location</h3>
+                <p>Gondar, Ethiopia</p>
+              </div>
+            </div>
+          </div>
+          
+          <form id="contactForm" class="contact-form">
+  <div class="form-group">
+    <input type="text" class="form-control" id="name" placeholder=" " required>
+    <label for="name" class="form-label">Your Name</label>
+  </div>
+
+  <div class="form-group">
+    <input type="email" class="form-control" id="email" placeholder=" " required>
+    <label for="email" class="form-label">Your Email</label>
+  </div>
+
+  <div class="form-group">
+    <textarea class="form-control" id="message" placeholder=" " required></textarea>
+    <label for="message" class="form-label">Your Message</label>
+  </div>
+
+  <!-- Password Field -->
+  <div class="form-group">
+    <input type="password" class="form-control" id="password" placeholder=" " required>
+    <label for="password" class="form-label">Your Password</label>
+    <span id="togglePassword" style="cursor: pointer; position: absolute; right: 10px; top: 12px;">👁️</span>
+    <div id="passwordStrength" style="font-size: 14px; margin-top: 5px;"></div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-paper-plane"></i> Send Message
+  </button>
+</form>
+        </div>
+        
+        <div class="social-links" id="socialLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Gebretsadik Woldesenbet. COMPITER SIENCE.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
