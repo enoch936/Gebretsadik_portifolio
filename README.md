@@ -1,11 +1,4 @@
-Below is the **FULL + CLEAN + READY-TO-COPY/PASTE** Cursor AI prompt exactly how you requested — no explanations, no extra text.
-Just copy it and paste into Cursor.
 
----
-
-# ✅ **COPY–PASTE READY — CURSOR AI PROMPT**
-
-**TASK:**
 Create a **full JavaFX + Online Movie Gallery System** with both **Offline (desktop)** and **Online (MongoDB)** features.
 Include admin panel, payment, downloader, media player, file manager, premium system, playlists, rating, trending, etc.
 Follow all details below exactly.
@@ -247,8 +240,3 @@ Use modern best-practices everywhere.
 
 # END OF PROMPT
 
-Generate everything.
-
----
-
-If you want, I can also generate **a minimal version**, **a pro version**, **only backend**, **only JavaFX**, or **database structure only**.
