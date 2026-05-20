@@ -177,6 +177,7 @@ class PortfolioApp {
     const skills = ['Java', 'Python', 'JavaScript', 'SQL', 'HTML5', 'CSS3', 'React', 'Node.js', 'Networking', 'Git', 'Linux'];
     const container = document.getElementById('skillsContainer');
     if (!container) return;
+    container.innerHTML = '';
 
     skills.forEach((skill) => {
       const element = document.createElement('div');
@@ -195,6 +196,7 @@ class PortfolioApp {
 
     const container = document.getElementById('certificationsGrid');
     if (!container) return;
+    container.innerHTML = '';
 
     certifications.forEach((certification) => {
       const item = document.createElement('div');
@@ -270,6 +272,7 @@ class PortfolioApp {
 
     const container = document.getElementById('socialLinks');
     if (!container) return;
+    container.innerHTML = '';
 
     links.forEach((link) => {
       const element = document.createElement('a');
@@ -292,6 +295,10 @@ class PortfolioApp {
 
     document.querySelectorAll('.nav-menu a').forEach((link) => link.classList.remove('active'));
     document.querySelector(`.nav-menu a[href="#${sectionId}"]`)?.classList.add('active');
+
+    if (window.innerWidth <= 768) {
+      document.querySelector('.nav-menu')?.classList.remove('active');
+    }
   }
 
   async handleFormSubmit(event) {
