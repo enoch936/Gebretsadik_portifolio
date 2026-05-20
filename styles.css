@@ -851,3 +851,50 @@ footer::before {
     stroke-dashoffset: 0;
   }
 }
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: rgba(123, 44, 191, 0.2);
+  border: 1px solid rgba(123, 44, 191, 0.4);
+  border-radius: 12px;
+  padding: 0.9rem;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.project-toolbar {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border: 1px solid rgba(76, 201, 240, 0.5);
+  background: rgba(76, 201, 240, 0.1);
+  color: var(--text-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--secondary);
+  color: #12002f;
+}
