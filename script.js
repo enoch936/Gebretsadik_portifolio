@@ -16,6 +16,7 @@ class PortfolioApp {
     this.loadProjects();
     this.loadSocialLinks();
     this.setCurrentYear();
+    this.initTheme();
   }
 
   setupEventListeners() {
@@ -69,8 +70,29 @@ class PortfolioApp {
   loadSocialLinks() { const c = document.getElementById('socialLinks'); if (!c) return; [{icon:'fab fa-github',url:'https://github.com/enoch936'},{icon:'fab fa-linkedin',url:'https://linkedin.com/in/gebret'}].forEach(link=>{const a=document.createElement('a'); a.className='social-link'; a.href=link.url; a.target='_blank'; a.rel='noopener noreferrer'; a.innerHTML=`<i class="${link.icon}"></i>`; c.appendChild(a);}); }
 
   toggleMenu() { document.querySelector('.nav-menu')?.classList.toggle('active'); }
+
+  initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light');
+    }
+    this.updateThemeIcon();
+  }
+
+  updateThemeIcon() {
+    const icon = document.querySelector('.dark-mode-toggle i');
+    if (!icon) return;
+    icon.classList.toggle('fa-moon', !document.body.classList.contains('light'));
+    icon.classList.toggle('fa-sun', document.body.classList.contains('light'));
+  }
+
   showSection(id) { document.querySelectorAll('section').forEach(s=>s.classList.remove('active')); document.getElementById(id)?.classList.add('active'); document.querySelectorAll('.nav-menu a').forEach(a=>a.classList.remove('active')); document.querySelector(`.nav-menu a[href="#${id}"]`)?.classList.add('active'); }
-  toggleDarkMode() { document.body.classList.toggle('dark'); this.showNotification(document.body.classList.contains('dark') ? 'Dark mode enabled' : 'Light mode enabled'); }
+  toggleDarkMode() {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    this.updateThemeIcon();
+    this.showNotification(document.body.classList.contains('light') ? 'Light mode enabled' : 'Dark mode enabled');
+  }
 
   async handleFormSubmit(e) { e.preventDefault(); const name=document.getElementById('name')?.value.trim(); const email=document.getElementById('email')?.value.trim(); const message=document.getElementById('message')?.value.trim(); if(!name||!email||!message){this.showNotification('Please fill all fields', true); return;} this.showNotification('Message sent successfully!'); e.target.reset(); }
   showNotification(message, isError = false) { document.querySelectorAll('.notification').forEach(n=>n.remove()); const notification=document.createElement('div'); notification.className=`notification ${isError ? 'error' : 'success'}`; notification.textContent=message; document.body.appendChild(notification); setTimeout(()=>notification.remove(),2500); }

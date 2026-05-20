@@ -898,3 +898,44 @@ footer::before {
   background: var(--secondary);
   color: #12002f;
 }
+
+/* Light Theme */
+body.light {
+  --dark: #eef3fb;
+  --light: #111827;
+  --text-light: #1f2937;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-dark: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, #f7fbff 0%, #eaf2ff 100%);
+  color: #1f2937;
+}
+
+body.light .content-section,
+body.light .project-card,
+body.light .nav-menu,
+body.light .form-control {
+  color: #1f2937;
+  border-color: rgba(123, 44, 191, 0.18);
+}
+
+body.light .project-card {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body.light .form-control {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.light .form-label,
+body.light p,
+body.light ul li,
+body.light .project-link,
+body.light footer,
+body.light .nav-menu li a,
+body.light h2 {
+  color: #1f2937;
+}
+
+body.light .binary-rain {
+  opacity: 0.06;
+}
