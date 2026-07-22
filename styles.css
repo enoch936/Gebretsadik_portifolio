@@ -851,3 +851,91 @@ footer::before {
     stroke-dashoffset: 0;
   }
 }
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: rgba(123, 44, 191, 0.2);
+  border: 1px solid rgba(123, 44, 191, 0.4);
+  border-radius: 12px;
+  padding: 0.9rem;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.project-toolbar {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border: 1px solid rgba(76, 201, 240, 0.5);
+  background: rgba(76, 201, 240, 0.1);
+  color: var(--text-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--secondary);
+  color: #12002f;
+}
+
+/* Light Theme */
+body.light {
+  --dark: #eef3fb;
+  --light: #111827;
+  --text-light: #1f2937;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-dark: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(180deg, #f7fbff 0%, #eaf2ff 100%);
+  color: #1f2937;
+}
+
+body.light .content-section,
+body.light .project-card,
+body.light .nav-menu,
+body.light .form-control {
+  color: #1f2937;
+  border-color: rgba(123, 44, 191, 0.18);
+}
+
+body.light .project-card {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+body.light .form-control {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+body.light .form-label,
+body.light p,
+body.light ul li,
+body.light .project-link,
+body.light footer,
+body.light .nav-menu li a,
+body.light h2 {
+  color: #1f2937;
+}
+
+body.light .binary-rain {
+  opacity: 0.06;
+}
